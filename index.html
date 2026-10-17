@@ -3,26 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>کانون سلامت و پرستاری</title>
+<title>کانون سلامت و پرستاری | دانشگاه آزاد دهاقان</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --primary: #0e7c7b;
-    --primary-dark: #095f5e;
-    --primary-light: #e6f4f3;
-    --accent: #16a3a1;
-    --soft: #f7fbfb;
-    --text: #1f2d2d;
-    --muted: #5b6e6e;
+    --primary: #0a3d3a;
+    --primary-dark: #062926;
+    --primary-light: #e8f0ef;
+    --accent: #1a3a5c;
+    --accent-light: #2d5a7a;
+    --soft: #f4f8f7;
+    --text: #1a2a2a;
+    --muted: #4f6363;
     --white: #ffffff;
-    --shadow: 0 10px 30px rgba(14, 124, 123, 0.10);
+    --shadow: 0 10px 30px rgba(10, 61, 58, 0.10);
     --radius: 20px;
   }
 
@@ -40,15 +37,15 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(14, 124, 123, 0.12);
+    border-bottom: 1px solid rgba(10, 61, 58, 0.12);
   }
 
   .nav {
     max-width: 1150px;
     margin: 0 auto;
-    padding: 14px 24px;
+    padding: 12px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,20 +57,16 @@
     align-items: center;
     gap: 10px;
     font-weight: 900;
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--primary-dark);
   }
 
-  .logo-icon {
-    width: 42px;
-    height: 42px;
+  .logo img {
+    width: 46px;
+    height: 46px;
     border-radius: 12px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    display: grid;
-    place-items: center;
-    color: #fff;
-    font-size: 1.2rem;
-    box-shadow: 0 6px 16px rgba(14, 124, 123, 0.3);
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(10, 61, 58, 0.2);
   }
 
   .nav-links {
@@ -152,10 +145,10 @@
   .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--accent));
     color: #fff;
-    box-shadow: 0 10px 24px rgba(14, 124, 123, 0.28);
+    box-shadow: 0 10px 24px rgba(10, 61, 58, 0.28);
   }
 
-  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(14, 124, 123, 0.35); }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(10, 61, 58, 0.35); }
 
   .btn-outline {
     border: 2px solid var(--primary);
@@ -181,7 +174,7 @@
     position: absolute;
     width: 220px;
     height: 220px;
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.10);
     border-radius: 50%;
     top: -70px;
     left: -70px;
@@ -192,7 +185,7 @@
     position: absolute;
     width: 160px;
     height: 160px;
-    background: rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.08);
     border-radius: 50%;
     bottom: -50px;
     right: -40px;
@@ -235,13 +228,13 @@
     font-size: 0.95rem;
   }
 
-  /* ---------- INTRO / ABOUT ---------- */
+  /* ---------- ABOUT ---------- */
   .about-box {
     background: var(--white);
     border-radius: var(--radius);
     padding: 40px;
     box-shadow: var(--shadow);
-    border: 1px solid rgba(14, 124, 123, 0.08);
+    border: 1px solid rgba(10, 61, 58, 0.08);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 36px;
@@ -284,13 +277,13 @@
     border-radius: var(--radius);
     padding: 32px 26px;
     box-shadow: var(--shadow);
-    border: 1px solid rgba(14, 124, 123, 0.07);
+    border: 1px solid rgba(10, 61, 58, 0.07);
     transition: 0.35s;
     display: flex;
     flex-direction: column;
   }
 
-  .card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(14, 124, 123, 0.18); }
+  .card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(10, 61, 58, 0.18); }
 
   .card-icon {
     width: 58px;
@@ -336,7 +329,7 @@
   .event.light {
     background: var(--white);
     color: var(--text);
-    border: 1px solid rgba(14, 124, 123, 0.1);
+    border: 1px solid rgba(10, 61, 58, 0.1);
   }
 
   .event .date {
@@ -420,13 +413,13 @@
   .contact-form textarea::placeholder { color: rgba(255,255,255,0.55); }
 
   .contact-form input:focus,
-  .contact-form textarea:focus { border-color: var(--accent); background: rgba(255,255,255,0.14); }
+  .contact-form textarea:focus { border-color: var(--accent-light); background: rgba(255,255,255,0.14); }
 
   .contact-form button {
     padding: 13px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(135deg, var(--accent), #1ec4c1);
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
     color: #fff;
     font-family: inherit;
     font-weight: 800;
@@ -435,11 +428,11 @@
     transition: 0.3s;
   }
 
-  .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(22,163,161,0.4); }
+  .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(26, 58, 92, 0.4); }
 
   /* ---------- FOOTER ---------- */
   footer {
-    background: #0b3d3c;
+    background: var(--primary-dark);
     color: rgba(255,255,255,0.75);
     padding: 40px 24px 24px;
     margin-top: 40px;
@@ -462,7 +455,7 @@
   .footer-inner a { font-size: 0.85rem; transition: 0.25s; }
   .footer-inner a:hover { color: #fff; padding-right: 5px; }
 
-  .socials { display: flex; gap: 10px; margin-top: 16px; }
+  .socials { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
 
   .socials a {
     width: 38px;
@@ -475,7 +468,7 @@
     transition: 0.25s;
   }
 
-  .socials a:hover { background: var(--accent); transform: translateY(-3px); }
+  .socials a:hover { background: var(--accent-light); transform: translateY(-3px); }
 
   .copyright {
     max-width: 1150px;
@@ -513,7 +506,7 @@
 <header>
   <div class="nav">
     <a href="#" class="logo">
-      <span class="logo-icon">🩺</span>
+      <img src="logo.png" alt="لوگو کانون سلامت و پرستاری">
       کانون سلامت و پرستاری
     </a>
     <nav class="nav-links">
@@ -529,10 +522,10 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div>
-    <span class="hero-badge">🌿 با هم برای سلامت، با هم برای پرستاری</span>
+    <span class="hero-badge">🌿 پرستاری فراتر از درمان</span>
     <h1>جایی که <span>سلامت</span> و <span>پرستاری</span> به هم می‌رسند</h1>
     <p>
-      کانون سلامت و پرستاری، خانه‌ای برای دانشجویان و فعالان حوزه سلامت است؛
+      کانون سلامت و پرستاری دانشگاه آزاد اسلامی واحد دهاقان، خانه‌ای برای دانشجویان و فعالان حوزه سلامت است؛
       فضایی برای یادگیری، خلاقیت، هم‌دلی و ساختن تجربه‌هایی که فراتر از کلاس درس است.
       اینجا هر ایده‌ای شنیده می‌شود و هر قدمی به رشد جمعی نزدیک‌تر می‌کند.
     </p>
@@ -553,25 +546,25 @@
   <div class="section-head">
     <span class="tag">درباره ما</span>
     <h2>کانون سلامت و پرستاری چیست؟</h2>
-    <p>یک تشکل دانشجویی پویا که با هدف ترویج فرهنگ سلامت، توانمندسازی دانشجویان و ایجاد فضای تعامل و خلاقیت شکل گرفته است.</p>
+    <p>تشکلی دانشجویی در دانشکده پرستاری دانشگاه آزاد دهاقان که با هدف ترویج فرهنگ سلامت، توانمندسازی دانشجویان و ایجاد فضای تعامل و خلاقیت فعالیت می‌کند.</p>
   </div>
   <div class="about-box">
     <div>
       <h3>ما اینجا هستیم تا کنار هم رشد کنیم</h3>
       <p>
         کانون سلامت و پرستاری بستری است برای آن‌هایی که دغدغه سلامت دارند؛
-        از دانشجویان پرستاری و پزشکی تا هر علاقه‌مندی که می‌خواهد در مسیر آگاهی و خدمت قدم بردارد.
+        از دانشجویان پرستاری تا هر علاقه‌مندی که می‌خواهد در مسیر آگاهی و خدمت قدم بردارد.
       </p>
       <p>
-        ما با برگزاری نشست‌ها، پادکست‌ها، نشریات، فعالیت‌های فرهنگی و رویدادهایی مثل جشن روز پرستار،
+        ما با برگزاری نشست‌ها، پادکست‌ها، نشریات، کارگاه‌های تخصصی و رویدادهایی مثل جشن روز پرستار،
         تلاش می‌کنیم فضایی گرم، خلاق و آموزنده برای اعضا بسازیم.
       </p>
     </div>
     <div class="about-stats">
       <div class="stat"><div class="num">+۴</div><div class="lbl">بخش فعال</div></div>
-      <div class="stat"><div class="num">+۲۰</div><div class="lbl">عضو و همکار</div></div>
-      <div class="stat"><div class="num">+۱۰</div><div class="lbl">رویداد برگزارشده</div></div>
+      <div class="stat"><div class="num">۲۴</div><div class="lbl">عضو و همکار</div></div>
       <div class="stat"><div class="num">∞</div><div class="lbl">ایده و انرژی</div></div>
+      <div class="stat"><div class="num">🩺</div><div class="lbl">پرستاری فراتر از درمان</div></div>
     </div>
   </div>
 </section>
@@ -589,7 +582,7 @@
     <div class="card">
       <div class="card-icon">🎙️</div>
       <h3>پادکست کانون</h3>
-      <p>گفت‌وگوهای شنیدنی درباره سلامت، پرستاری، تجربه‌های بالینی و موضوعاتی که کمتر شنیده می‌شوند.</p>
+      <p>گفت‌وگوهای شنیدنی درباره سلامت، پرستاری و تجربه‌های بالینی؛ محتوایی که کمتر شنیده می‌شود.</p>
       <a href="#" class="card-link">ورود به بخش پادکست ←</a>
     </div>
 
@@ -605,7 +598,7 @@
     <div class="card">
       <div class="card-icon">🎲</div>
       <h3>اتاق بازی</h3>
-      <p>فضایی شاد و خلاقانه برای بازی، سرگرمی و نفس کشیدن بین درس و کار؛ چون سلامت فقط جسم نیست.</p>
+      <p>فضایی شاد و خلاقانه برای بازی و سرگرمی؛ چون سلامت فقط جسم نیست و روح هم نیاز به نفس کشیدن دارد.</p>
       <a href="#" class="card-link">ورود به اتاق بازی ←</a>
     </div>
 
@@ -613,11 +606,11 @@
     <div class="card">
       <div class="card-icon">🎉</div>
       <h3>فعالیت‌های کانون</h3>
-      <p>جشن روز پرستار، اردوها، کارگاه‌ها و رویدادهایی که اعضای کانون را به هم نزدیک‌تر می‌کند.</p>
+      <p>جشن روز پرستار، کارگاه‌های تخصصی و رویدادهایی که اعضای کانون را به هم نزدیک‌تر می‌کند.</p>
       <a href="#" class="card-link">مشاهده فعالیت‌ها ←</a>
     </div>
 
-    <!-- سلامت و مشاوره -->
+    <!-- سلامت و آگاهی -->
     <div class="card">
       <div class="card-icon">💡</div>
       <h3>سلامت و آگاهی</h3>
@@ -630,7 +623,7 @@
       <div class="card-icon">🤝</div>
       <h3>همکاری با ما</h3>
       <p>اگر ایده، استعداد یا انرژی داری، جای تو در کانون خالی است. با ما همراه شو و بخشی از این مسیر باش.</p>
-      <a href="#contact" class="card-link">فرم همکاری ←</a>
+      <a href="https://eitaa.com/Safir_S_D" target="_blank" class="card-link">ارتباط در ایتا ←</a>
     </div>
 
   </div>
@@ -641,28 +634,28 @@
   <div class="section-head">
     <span class="tag">رویدادها</span>
     <h2>اتفاق‌های کانون</h2>
-    <p>از جشن روز پرستار تا کارگاه‌ها و نشست‌های تخصصی؛ اینجا همیشه چیزی در جریان است.</p>
+    <p>از جشن روز پرستار تا کارگاه‌های تخصصی؛ اینجا همیشه چیزی در جریان است.</p>
   </div>
   <div class="events">
     <div class="event">
-      <span class="date">اردیبهشت هر سال</span>
-      <h3>جشن روز پرستار 🩺</h3>
+      <span class="date">چهارشنبه ۲۹ مهر</span>
+      <h3>جشن روز پرستاری 🩺</h3>
       <p>دور هم جمع می‌شویم تا از پرستاران قدردانی کنیم؛ با برنامه‌های شاد، تقدیر از همکاران و لحظه‌های به‌یادماندنی.</p>
     </div>
     <div class="event light">
-      <span class="date">طول سال</span>
-      <h3>کارگاه‌ها و نشست‌ها 📚</h3>
-      <p>کارگاه‌های مهارتی، نشست‌های تخصصی و جلسات گفت‌وگو با حضور اساتید و فعالان حوزه سلامت.</p>
+      <span class="date">چهارشنبه ۲۹ مهر</span>
+      <h3>کارگاه جامع احیای قلبی ریوی (CPR) 📚</h3>
+      <p>کارگاه تخصصی و عملی CPR با هدف ارتقای مهارت‌های بالینی دانشجویان و علاقه‌مندان حوزه سلامت.</p>
     </div>
     <div class="event light">
-      <span class="date">فصلی</span>
-      <h3>اردوها و برنامه‌های تفریحی 🌿</h3>
-      <p>فرصتی برای دور هم بودن، تجدید انرژی و ساختن خاطره‌های خوب در کنار دوستان کانون.</p>
+      <span class="date">طول سال</span>
+      <h3>نشست‌ها و کارگاه‌ها 🎓</h3>
+      <p>جلسات گفت‌وگو، نشست‌های تخصصی و کارگاه‌های مهارتی با حضور اساتید و فعالان حوزه سلامت.</p>
     </div>
     <div class="event">
       <span class="date">در حال برنامه‌ریزی</span>
       <h3>مسابقات و چالش‌ها 🏆</h3>
-      <p>مسابقات فرهنگی، چالش‌های خلاقانه و فعالیت‌های گروهی برای پر کردن لحظه‌ها با انرژی و انگیزه.</p>
+      <p>مسابقات فرهنگی و چالش‌های خلاقانه برای پر کردن لحظه‌ها با انرژی و انگیزه.</p>
     </div>
   </div>
 </section>
@@ -684,38 +677,45 @@
           <span class="ci-icon">📧</span>
           <div>
             <div class="ci-label">ایمیل</div>
-            <div class="ci-value">kanoon.health@example.com</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <span class="ci-icon">📱</span>
-          <div>
-            <div class="ci-label">شماره تماس</div>
-            <div class="ci-value">۰۹۱۲ ۰۰۰ ۰۰۰۰</div>
+            <div class="ci-value">safirsalamat.dhq@gmail.com</div>
           </div>
         </div>
         <div class="contact-item">
           <span class="ci-icon">📍</span>
           <div>
             <div class="ci-label">آدرس</div>
-            <div class="ci-value">دانشکده سلامت، طبقه اول، اتاق کانون</div>
+            <div class="ci-value">دانشگاه آزاد اسلامی واحد دهاقان، دانشکده پرستاری، طبقه اول، کانون سلامت و پرستاری</div>
           </div>
         </div>
         <div class="contact-item">
-          <span class="ci-icon">💬</span>
+          <span class="ci-icon">✈️</span>
           <div>
-            <div class="ci-label">شبکه‌های اجتماعی</div>
-            <div class="ci-value">@kanoon_health</div>
+            <div class="ci-label">ایتا (کانال)</div>
+            <div class="ci-value">eitaa.com/safirsalamat_dhq</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">✈️</span>
+          <div>
+            <div class="ci-label">تلگرام (کانال)</div>
+            <div class="ci-value">t.me/safirsalamat_dhq</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">📷</span>
+          <div>
+            <div class="ci-label">اینستاگرام</div>
+            <div class="ci-value">instagram.com/safirsalamat_dhq</div>
           </div>
         </div>
       </div>
     </div>
 
-    <form class="contact-form" onsubmit="event.preventDefault(); alert('پیام شما ثبت شد. ممنون! 🌿');">
-      <input type="text" placeholder="نام و نام خانوادگی" required>
-      <input type="email" placeholder="ایمیل یا شماره تماس" required>
-      <input type="text" placeholder="موضوع پیام">
-      <textarea rows="4" placeholder="پیام خود را بنویسید..." required></textarea>
+    <form class="contact-form" action="https://formspree.io/f/mwlvyzoy" method="POST">
+      <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
+      <input type="email" name="email" placeholder="ایمیل یا شماره تماس" required>
+      <input type="text" name="subject" placeholder="موضوع پیام">
+      <textarea name="message" rows="4" placeholder="پیام خود را بنویسید..." required></textarea>
       <button type="submit">ارسال پیام</button>
     </form>
   </div>
@@ -726,12 +726,12 @@
   <div class="footer-inner">
     <div>
       <h4>🩺 کانون سلامت و پرستاری</h4>
-      <p>خانه‌ای برای دانشجویان و فعالان حوزه سلامت؛ جایی برای یادگیری، هم‌دلی و ساختن تجربه‌های ماندگار.</p>
+      <p>دانشگاه آزاد اسلامی واحد دهاقان، دانشکده پرستاری. خانه‌ای برای دانشجویان و فعالان حوزه سلامت؛ جایی برای یادگیری، هم‌دلی و ساختن تجربه‌های ماندگار.</p>
       <div class="socials">
-        <a href="#" title="اینستاگرام">📷</a>
-        <a href="#" title="تلگرام">✈️</a>
-        <a href="#" title="واتساپ">💬</a>
-        <a href="#" title="ایمیل">📧</a>
+        <a href="https://eitaa.com/safirsalamat_dhq" target="_blank" title="ایتا">✈️</a>
+        <a href="https://t.me/safirsalamat_dhq" target="_blank" title="تلگرام">✈️</a>
+        <a href="https://www.instagram.com/safirsalamat_dhq" target="_blank" title="اینستاگرام">📷</a>
+        <a href="mailto:safirsalamat.dhq@gmail.com" title="ایمیل">📧</a>
       </div>
     </div>
     <div>
@@ -753,7 +753,7 @@
       </ul>
     </div>
   </div>
-  <div class="copyright">© تمامی حقوق برای کانون سلامت و پرستاری محفوظ است.</div>
+  <div class="copyright">© تمامی حقوق برای کانون سلامت و پرستاری دانشگاه آزاد دهاقان محفوظ است.</div>
 </footer>
 
 </body>
