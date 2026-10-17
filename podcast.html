@@ -265,7 +265,7 @@
         مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
       </audio>
       <div class="meta-row">
-        <span class="meta-item">🎧 اپیزود اول</span>
+        <span class="meta-item" id="nowPlaying">🎧 در حال پخش: آدم‌های سمی</span>
         <span class="meta-item">🩺 صدای سلامت</span>
       </div>
     </div>
@@ -273,7 +273,7 @@
     <div class="episode-list fade-in-up delay-4">
       <h3>لیست قسمت‌ها</h3>
 
-      <div class="episode-item active" data-src="podcast1.mp3">
+      <div class="episode-item active" data-src="podcast1.mp3" data-title="آدم‌های سمی">
         <div class="episode-num">۱</div>
         <div class="episode-info">
           <div class="ep-title">آدم‌های سمی</div>
@@ -281,7 +281,7 @@
         </div>
       </div>
 
-      <div class="episode-item" data-src="podcast2.mp3">
+      <div class="episode-item" data-src="podcast2.mp3" data-title="قدرت شروع ناقص">
         <div class="episode-num">۲</div>
         <div class="episode-info">
           <div class="ep-title">قدرت شروع ناقص</div>
@@ -289,7 +289,7 @@
         </div>
       </div>
 
-      <div class="episode-item" data-src="podcast3.mp3">
+      <div class="episode-item" data-src="podcast3.mp3" data-title="عادت‌های اتمی">
         <div class="episode-num">۳</div>
         <div class="episode-info">
           <div class="ep-title">عادت‌های اتمی</div>
@@ -297,7 +297,7 @@
         </div>
       </div>
 
-      <div class="episode-item" data-src="podcast4.mp3">
+      <div class="episode-item" data-src="podcast4.mp3" data-title="چهره‌های آشنا، روایت‌های پنهان">
         <div class="episode-num">۴</div>
         <div class="episode-info">
           <div class="ep-title">چهره‌های آشنا، روایت‌های پنهان</div>
@@ -312,17 +312,20 @@
   </div>
 
   <script>
-    // پخش انتخاب قسمت‌ها
     const audio = document.getElementById('audioPlayer');
     const items = document.querySelectorAll('.episode-item');
+    const nowPlaying = document.getElementById('nowPlaying');
+
     items.forEach(item => {
       item.addEventListener('click', () => {
         const src = item.getAttribute('data-src');
+        const title = item.getAttribute('data-title');
         if (!src) return;
         items.forEach(i => i.classList.remove('active'));
         item.classList.add('active');
         audio.src = src;
         audio.play().catch(() => {});
+        nowPlaying.textContent = '🎧 در حال پخش: ' + title;
       });
     });
   </script>
