@@ -84,9 +84,6 @@
   @keyframes fadeInUp {
     to { opacity: 1; transform: translateY(0); }
   }
-  @keyframes cardEntry {
-    to { opacity: 1; transform: translateY(0); }
-  }
   @keyframes pulseGlow {
     0%,100% { box-shadow: 0 0 0 0 rgba(255,122,26,0.5); }
     50%     { box-shadow: 0 0 0 10px rgba(255,122,26,0); }
@@ -285,6 +282,26 @@
   .stat:hover { transform: translateY(-4px); background: rgba(0,212,160,0.12); }
   .stat .num { font-size: 1.6rem; font-weight: 900; color: var(--surgical-green); }
   .stat .lbl { font-size: .78rem; color: var(--text-muted); }
+
+  /* ---------- تیم ما ---------- */
+  .team-photo-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 26px;
+    padding: 14px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.8), inset 0 0 30px rgba(0,212,160,0.05);
+    overflow: hidden;
+  }
+  .team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+    transition: transform .5s ease;
+  }
+  .team-photo-wrap:hover .team-photo { transform: scale(1.02); }
 
   /* ---------- کارت‌ها ---------- */
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -500,6 +517,9 @@
     .stat .num { font-size: 1.3rem; }
     .stat .lbl { font-size: .7rem; }
 
+    .team-photo-wrap { padding: 8px; border-radius: 18px; }
+    .team-photo { border-radius: 14px; }
+
     .cards { grid-template-columns: 1fr; gap: 16px; }
     .card { padding: 22px 18px; border-radius: 18px; }
     .card-icon { width: 48px; height: 48px; font-size: 1.3rem; margin-bottom: 12px; border-radius: 12px; }
@@ -572,6 +592,7 @@
       </a>
       <nav class="nav-links">
         <a href="#about">درباره کانون</a>
+        <a href="#team">تیم ما</a>
         <a href="#sections">بخش‌ها</a>
         <a href="#events">رویدادها</a>
         <a href="#contact">ارتباط با ما</a>
@@ -623,6 +644,18 @@
     </div>
   </section>
 
+  <!-- تیم ما -->
+  <section class="section" id="team">
+    <div class="section-head fade-in-up delay-1">
+      <span class="tag">تیم ما</span>
+      <h2>چهره‌های کانون</h2>
+      <p>اعضایی که با انرژی و دغدغه، کانون سلامت و پرستاری را زنده نگه داشته‌اند.</p>
+    </div>
+    <div class="team-photo-wrap fade-in-up delay-2">
+      <img src="0E8A0985.JPG" alt="اعضای کانون سلامت و پرستاری" class="team-photo">
+    </div>
+  </section>
+
   <!-- بخش‌ها -->
   <section class="section" id="sections">
     <div class="section-head fade-in-up delay-1">
@@ -631,42 +664,55 @@
       <p>هر کدام از بخش‌های ما دریچه‌ای است به یک تجربه متفاوت. روی هر بخش کلیک کن و وارد دنیای آن شو.</p>
     </div>
     <div class="cards">
+
+      <!-- پادکست -->
       <div class="card fade-in-up delay-1">
         <div class="card-icon">🎙️</div>
         <h3>پادکست کانون</h3>
-        <p>گفت‌وگوهای شنیدنی درباره سلامت، پرستاری و تجربه‌های بالینی؛ محتوایی که کمتر شنیده می‌شود.</p>
-        <a href="#" class="card-link">ورود به بخش پادکست ←</a>
+        <p>روایتی متفاوت از چهره‌هایی که هر روز می‌بینیمشان ولی تا به حال نشنیدیمشان.</p>
+        <a href="podcast.html" class="card-link">شنیدن پادکست ←</a>
       </div>
+
+      <!-- نشریه -->
       <div class="card fade-in-up delay-2">
         <div class="card-icon">📰</div>
         <h3>نشریه کانون</h3>
         <p>نوشته‌ها، یادداشت‌ها و گزارش‌هایی از دنیای سلامت؛ جایی برای قلم زدن و به اشتراک گذاشتن دانش.</p>
-        <a href="#" class="card-link">ورود به بخش نشریه ←</a>
+        <a href="https://dehaghan.iau.ir/student/fa/content/162/سفیر-سلامت" target="_blank" rel="noopener" class="card-link">ورود به بخش نشریه ←</a>
       </div>
+
+      <!-- اتاق بازی -->
       <div class="card fade-in-up delay-3">
         <div class="card-icon">🎲</div>
         <h3>اتاق بازی</h3>
         <p>فضایی شاد و خلاقانه برای بازی و سرگرمی؛ چون سلامت فقط جسم نیست و روح هم نیاز به نفس کشیدن دارد.</p>
-        <a href="#" class="card-link">ورود به اتاق بازی ←</a>
+        <a href="https://sites.google.com/view/otagh-bazi/" target="_blank" rel="noopener" class="card-link">ورود به اتاق بازی ←</a>
       </div>
+
+      <!-- فعالیت‌ها -->
       <div class="card fade-in-up delay-1">
         <div class="card-icon">🎉</div>
         <h3>فعالیت‌های کانون</h3>
         <p>جشن روز پرستار، کارگاه‌های تخصصی و رویدادهایی که اعضای کانون را به هم نزدیک‌تر می‌کند.</p>
         <a href="#" class="card-link">مشاهده فعالیت‌ها ←</a>
       </div>
+
+      <!-- سلامت و آگاهی -->
       <div class="card fade-in-up delay-2">
         <div class="card-icon">💡</div>
         <h3>سلامت و آگاهی</h3>
         <p>محتوای آموزشی، نکات بهداشتی و مطالب کاربردی برای ارتقای آگاهی سلامت در جامعه دانشجویی.</p>
         <a href="#" class="card-link">مشاهده محتوا ←</a>
       </div>
+
+      <!-- همکاری -->
       <div class="card fade-in-up delay-3">
         <div class="card-icon">🤝</div>
         <h3>همکاری با ما</h3>
         <p>اگر ایده، استعداد یا انرژی داری، جای تو در کانون خالی است. با ما همراه شو و بخشی از این مسیر باش.</p>
         <a href="https://eitaa.com/Safir_S_D" target="_blank" rel="noopener" class="card-link">ارتباط در ایتا ←</a>
       </div>
+
     </div>
   </section>
 
@@ -823,6 +869,7 @@
         <h4>دسترسی سریع</h4>
         <ul>
           <li><a href="#about">درباره کانون</a></li>
+          <li><a href="#team">تیم ما</a></li>
           <li><a href="#sections">بخش‌ها</a></li>
           <li><a href="#events">رویدادها</a></li>
           <li><a href="#contact">ارتباط با ما</a></li>
@@ -831,9 +878,9 @@
       <div>
         <h4>بخش‌ها</h4>
         <ul>
-          <li><a href="#">پادکست</a></li>
-          <li><a href="#">نشریه</a></li>
-          <li><a href="#">اتاق بازی</a></li>
+          <li><a href="podcast.html">پادکست</a></li>
+          <li><a href="https://dehaghan.iau.ir/student/fa/content/162/سفیر-سلامت" target="_blank" rel="noopener">نشریه</a></li>
+          <li><a href="https://sites.google.com/view/otagh-bazi/" target="_blank" rel="noopener">اتاق بازی</a></li>
           <li><a href="#">فعالیت‌های کانون</a></li>
         </ul>
       </div>
