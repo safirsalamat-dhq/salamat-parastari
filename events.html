@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>پادکست چهره‌های آشنا، روایت‌های پنهان | کانون سلامت و پرستاری</title>
+<title>فعالیت‌های کانون | کانون سلامت و پرستاری</title>
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 <style>
   :root {
@@ -24,11 +24,6 @@
     color: var(--text-light);
     overflow-x: hidden;
     line-height: 1.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 16px;
-    position: relative;
   }
   a { text-decoration: none; color: inherit; }
   img { display: block; max-width: 100%; }
@@ -59,175 +54,135 @@
     animation: moveHeartbeat 15s linear infinite;
   }
   @keyframes moveHeartbeat { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  @keyframes cardEntry { to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-  @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-  @keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+  @keyframes cardEntry { to { opacity: 1; transform: translateY(0); } }
 
-  .podcast-card {
+  .page-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
     position: relative;
     z-index: 1;
-    background: var(--card-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    width: 100%;
-    max-width: 520px;
-    border-radius: 26px;
-    padding: 38px 30px;
-    border: 1px solid var(--card-border);
-    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.8), inset 0 0 30px rgba(0,212,160,0.05);
-    transform: translateY(30px);
-    opacity: 0;
-    animation: cardEntry 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    text-align: center;
   }
-  .podcast-card::before {
-    content: '';
-    position: absolute;
-    top: -1px; left: 10%; right: 10%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--surgical-green), transparent);
-    border-radius: 50%; opacity: .5;
-    animation: pulseDot 3s ease-in-out infinite;
-  }
-
-  .fade-in-up { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease-out forwards; }
-  .delay-1 { animation-delay: .2s; }
-  .delay-2 { animation-delay: .4s; }
-  .delay-3 { animation-delay: .6s; }
-  .delay-4 { animation-delay: .8s; }
 
   .back-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: .82rem;
+    font-size: .85rem;
     color: var(--text-muted);
-    margin-bottom: 22px;
+    margin-bottom: 26px;
     transition: .3s;
   }
   .back-link:hover { color: var(--surgical-green); gap: 10px; }
 
-  .podcast-icon-wrap {
-    width: 92px; height: 92px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--surgical-green), #008f6d);
-    display: grid; place-items: center;
-    font-size: 2.4rem;
-    box-shadow: 0 0 40px var(--surgical-green-glow);
-    animation: floatY 4s ease-in-out infinite;
+  .page-head {
+    text-align: center;
+    margin-bottom: 44px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp .8s ease-out .1s forwards;
+  }
+  .page-head .tag {
+    color: var(--surgical-green);
+    font-weight: 700;
+    font-size: .82rem;
+    letter-spacing: 1px;
+  }
+  .page-head h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 8px 0 12px;
+    text-shadow: 0 0 20px rgba(0,212,160,0.15);
+  }
+  .page-head p {
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: .93rem;
   }
 
-  .podcast-tag {
+  .report-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .report-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 22px;
+    padding: 24px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px -15px rgba(0,0,0,0.7), inset 0 0 30px rgba(0,212,160,0.04);
+    transition: .4s;
+    transform: translateY(24px);
+    opacity: 0;
+    animation: cardEntry .7s ease-out forwards;
+  }
+  .report-card:nth-child(1) { animation-delay: .2s; }
+  .report-card:nth-child(2) { animation-delay: .4s; }
+  .report-card:nth-child(3) { animation-delay: .6s; }
+  .report-card:hover {
+    border-color: rgba(0,212,160,0.4);
+    box-shadow: 0 26px 60px -15px rgba(0,0,0,0.8), 0 0 30px rgba(0,212,160,0.10);
+  }
+
+  .report-tag {
     display: inline-block;
     background: rgba(0,212,160,0.10);
     border: 1px solid rgba(0,212,160,0.30);
     color: var(--surgical-green);
-    padding: 5px 14px;
+    padding: 4px 14px;
     border-radius: 50px;
     font-size: .74rem;
     font-weight: 700;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
-  h1 {
-    font-size: 1.7rem;
-    font-weight: 900;
+  .report-card h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
     color: #fff;
-    line-height: 1.5;
-    margin-bottom: 12px;
-    text-shadow: 0 0 20px rgba(0,212,160,0.15);
+    margin-bottom: 6px;
   }
-  h1 span { color: var(--surgical-green); }
-
-  .podcast-desc {
-    font-size: .92rem;
+  .report-card .sub {
+    font-size: .84rem;
     color: var(--text-muted);
-    margin-bottom: 28px;
-    line-height: 2;
+    margin-bottom: 18px;
   }
 
-  .audio-wrap {
+  .report-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+  }
+  .photo-box {
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    overflow: hidden;
     background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px;
-    padding: 16px;
-    margin-bottom: 20px;
-  }
-  audio {
-    width: 100%;
-    outline: none;
-    border-radius: 12px;
-  }
-  audio::-webkit-media-controls-panel {
-    background: linear-gradient(135deg, rgba(0,212,160,0.25), rgba(0,100,255,0.25));
-  }
-
-  .meta-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: .78rem;
-    color: var(--text-muted);
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .meta-row .meta-item { display: flex; align-items: center; gap: 6px; }
-
-  .episode-list {
-    margin-top: 24px;
-    text-align: right;
-  }
-  .episode-list h3 {
-    font-size: .88rem;
-    font-weight: 800;
-    color: var(--text-light);
-    margin-bottom: 12px;
-  }
-  .episode-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px;
-    padding: 12px 14px;
-    margin-bottom: 8px;
+    border: 1px solid rgba(0,212,160,0.15);
     transition: .3s;
-    cursor: pointer;
   }
-  .episode-item:hover { background: rgba(0,212,160,0.08); border-color: rgba(0,212,160,0.30); transform: translateX(-4px); }
-  .episode-item.active { background: rgba(0,212,160,0.12); border-color: var(--surgical-green); }
-  .episode-num {
-    width: 32px; height: 32px;
-    border-radius: 8px;
-    background: rgba(0,212,160,0.15);
-    color: var(--surgical-green);
-    display: grid; place-items: center;
-    font-weight: 800;
-    font-size: .82rem;
-    flex-shrink: 0;
+  .photo-box:hover { border-color: var(--surgical-green); box-shadow: 0 0 20px rgba(0,212,160,0.15); }
+  .photo-box img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
   }
-  .episode-item.active .episode-num { background: var(--surgical-green); color: var(--navy-dark); }
-  .episode-info { flex: 1; text-align: right; }
-  .episode-info .ep-title { font-size: .84rem; font-weight: 700; color: var(--text-light); }
-  .episode-info .ep-sub { font-size: .72rem; color: var(--text-muted); }
+  .photo-box:hover img { transform: scale(1.05); }
 
-  .share-note {
-    margin-top: 22px;
-    font-size: .76rem;
-    color: var(--text-muted);
-    opacity: .8;
-  }
-
-  @media (max-width: 480px) {
-    .podcast-card { padding: 28px 20px; border-radius: 22px; }
-    h1 { font-size: 1.35rem; }
-    .podcast-desc { font-size: .84rem; }
-    .podcast-icon-wrap { width: 76px; height: 76px; font-size: 2rem; }
-    .episode-info .ep-title { font-size: .78rem; }
+  @media (max-width: 640px) {
+    .page-wrap { padding: 26px 14px 44px; }
+    .page-head h1 { font-size: 1.45rem; }
+    .page-head p { font-size: .85rem; }
+    .report-card { padding: 18px; border-radius: 18px; }
+    .report-card h2 { font-size: 1rem; }
+    .report-card .sub { font-size: .78rem; }
+    .report-photos { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -241,76 +196,53 @@
     </svg>
   </div>
 
-  <div class="podcast-card">
+  <div class="page-wrap">
 
-    <a href="index.html" class="back-link fade-in-up delay-1">→ بازگشت به صفحه اصلی</a>
+    <a href="index.html" class="back-link">→ بازگشت به صفحه اصلی</a>
 
-    <div class="podcast-icon-wrap fade-in-up delay-1">🎙️</div>
-
-    <span class="podcast-tag fade-in-up delay-2">صدای سلامت | کانون سلامت و پرستاری</span>
-
-    <h1 class="fade-in-up delay-2">
-      پادکست <span>چهره‌های آشنا، روایت‌های پنهان</span>
-    </h1>
-
-    <p class="podcast-desc fade-in-up delay-2">
-      روایتی متفاوت از چهره‌هایی که هر روز می‌بینیمشان ولی تا به حال نشنیدیمشان.
-    </p>
-
-    <div class="audio-wrap fade-in-up delay-3">
-      <audio id="audioPlayer" controls preload="metadata">
-        <source src="podcast1.mp3" type="audio/mpeg">
-        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
-      </audio>
-      <div class="meta-row">
-        <span class="meta-item">🎧 اپیزود اول</span>
-        <span class="meta-item">🩺 صدای سلامت</span>
-      </div>
+    <div class="page-head">
+      <span class="tag">فعالیت‌های کانون</span>
+      <h1>گزارش‌های تصویری</h1>
+      <p>لحظه‌هایی از تلاش، هم‌دلی و شادی اعضای کانون سلامت و پرستاری.</p>
     </div>
 
-    <div class="episode-list fade-in-up delay-4">
-      <h3>لیست قسمت‌ها</h3>
+    <div class="report-grid">
 
-      <div class="episode-item active" data-src="podcast1.mp3">
-        <div class="episode-num">۱</div>
-        <div class="episode-info">
-          <div class="ep-title">چهره‌های آشنا، روایت‌های پنهان</div>
-          <div class="ep-sub">اپیزود اول | صدای سلامت</div>
+      <!-- گزارش ۱: پذیرایی -->
+      <div class="report-card">
+        <span class="report-tag">#گزارش_تصویری</span>
+        <h2>زحمات بچه‌های کانون برای آماده‌سازی پذیرایی جشن روز پرستار</h2>
+        <p class="sub">پشت صحنه‌ی تلاش و هم‌دلی اعضا برای برگزاری هرچه بهتر جشن.</p>
+        <div class="report-photos">
+          <div class="photo-box"><img src="1.jpg" alt="آماده‌سازی پذیرایی جشن روز پرستار"></div>
         </div>
       </div>
 
-      <!-- قسمت‌های بعدی رو اینجا اضافه کن، مثل نمونه زیر: -->
-      <!--
-      <div class="episode-item" data-src="podcast2.mp3">
-        <div class="episode-num">۲</div>
-        <div class="episode-info">
-          <div class="ep-title">عنوان قسمت دوم</div>
-          <div class="ep-sub">اپیزود دوم | صدای سلامت</div>
+      <!-- گزارش ۲: جشن روز پرستار -->
+      <div class="report-card">
+        <span class="report-tag">#گزارش_تصویری</span>
+        <h2>تصاویر جشن روز پرستار</h2>
+        <p class="sub">لحظه‌های شاد و به‌یادماندنی جشن روز پرستار در کنار اعضای کانون.</p>
+        <div class="report-photos">
+          <div class="photo-box"><img src="2.jpg" alt="جشن روز پرستار - عکس اول"></div>
+          <div class="photo-box"><img src="3.jpg" alt="جشن روز پرستار - عکس دوم"></div>
         </div>
       </div>
-      -->
+
+      <!-- گزارش ۳: مسابقه آشپزی -->
+      <div class="report-card">
+        <span class="report-tag">#گزارش_تصویری</span>
+        <h2>مسابقه آشپزی</h2>
+        <p class="sub">رقابتی گرم و خوش‌طعم میان اعضای کانون؛ لحظه‌هایی پر از خلاقیت و انرژی.</p>
+        <div class="report-photos">
+          <div class="photo-box"><img src="4.jpg" alt="مسابقه آشپزی - عکس اول"></div>
+          <div class="photo-box"><img src="5.jpg" alt="مسابقه آشپزی - عکس دوم"></div>
+        </div>
+      </div>
 
     </div>
-
-    <p class="share-note fade-in-up delay-4">با گوش دادن، از ما حمایت کنید 🌿</p>
 
   </div>
-
-  <script>
-    // پخش انتخاب قسمت‌ها
-    const audio = document.getElementById('audioPlayer');
-    const items = document.querySelectorAll('.episode-item');
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        const src = item.getAttribute('data-src');
-        if (!src) return;
-        items.forEach(i => i.classList.remove('active'));
-        item.classList.add('active');
-        audio.src = src;
-        audio.play().catch(() => {});
-      });
-    });
-  </script>
 
 </body>
 </html>
