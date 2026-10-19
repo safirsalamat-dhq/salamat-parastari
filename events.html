@@ -1,3 +1,4 @@
+<!-- ===== events.html ===== -->
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -125,6 +126,8 @@
   .report-card:nth-child(1) { animation-delay: .2s; }
   .report-card:nth-child(2) { animation-delay: .4s; }
   .report-card:nth-child(3) { animation-delay: .6s; }
+  .report-card:nth-child(4) { animation-delay: .8s; }
+  .report-card:nth-child(5) { animation-delay: 1s; }
   .report-card:hover {
     border-color: rgba(0,212,160,0.4);
     box-shadow: 0 26px 60px -15px rgba(0,0,0,0.8), 0 0 30px rgba(0,212,160,0.10);
@@ -174,6 +177,40 @@
     transition: transform .5s ease;
   }
   .photo-box:hover img { transform: scale(1.05); }
+
+  /* پوستر تک‌عکس */
+  .poster-box {
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(0,212,160,0.15);
+    transition: .3s;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .poster-box:hover { border-color: var(--surgical-green); box-shadow: 0 0 25px rgba(0,212,160,0.15); }
+  .poster-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .5s ease;
+  }
+  .poster-box:hover img { transform: scale(1.02); }
+
+  /* ---------- ویدیو ---------- */
+  .video-box {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(0,212,160,0.15);
+    transition: .3s;
+  }
+  .video-box:hover { border-color: var(--surgical-green); box-shadow: 0 0 25px rgba(0,212,160,0.15); }
+  video {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+  }
 
   @media (max-width: 640px) {
     .page-wrap { padding: 26px 14px 44px; }
@@ -238,6 +275,29 @@
         <div class="report-photos">
           <div class="photo-box"><img src="4.jpg" alt="مسابقه آشپزی - عکس اول"></div>
           <div class="photo-box"><img src="5.jpg" alt="مسابقه آشپزی - عکس دوم"></div>
+        </div>
+      </div>
+
+      <!-- پوستر روز پرستار -->
+      <div class="report-card">
+        <span class="report-tag">🖼️ پوستر</span>
+        <h2>پوستر روز پرستار</h2>
+        <p class="sub">طرح گرافیکی کانون سلامت و پرستاری به مناسبت روز پرستار.</p>
+        <div class="poster-box">
+          <img src="9.jpg" alt="پوستر روز پرستار">
+        </div>
+      </div>
+
+      <!-- کلیپ تبریک روز پرستار -->
+      <div class="report-card">
+        <span class="report-tag">🎬 ویدیو</span>
+        <h2>کلیپ تبریک روز پرستار</h2>
+        <p class="sub">لحظه‌های گرم و صمیمانه‌ی تبریک روز پرستار از طرف اعضای کانون.</p>
+        <div class="video-box">
+          <video controls preload="metadata">
+            <source src="8.mp4" type="video/mp4">
+            مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+          </video>
         </div>
       </div>
 
